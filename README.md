@@ -19,7 +19,7 @@ This project demonstrates:
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 - **Source:** Kaggle Higgs Boson Challenge
 - **Events:** ~250,000 proton–proton collision events
@@ -89,5 +89,6 @@ This behavior is expected due to the highly engineered nature of the dataset.
 ├── Predictive_modelling.ipynb   # Main analysis notebook
 ├── README.md                    # Project documentation
 ├── figures/                     # Plots and visualizations
+
 
 
