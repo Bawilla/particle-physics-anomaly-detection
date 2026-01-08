@@ -1,4 +1,4 @@
-%%writefile README.md
+
 # Particle Physics–Inspired Anomaly Detection
 
 This project implements an **unsupervised anomaly detection pipeline inspired by particle physics (ATLAS/CMS)** using the Higgs Boson dataset.  
@@ -89,4 +89,5 @@ This behavior is expected due to the highly engineered nature of the dataset.
 ├── Predictive_modelling.ipynb   # Main analysis notebook
 ├── README.md                    # Project documentation
 ├── figures/                     # Plots and visualizations
+
 
