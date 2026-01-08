@@ -6,7 +6,7 @@ The goal is to identify rare or anomalous events **without using labels during t
 
 ---
 
-## 🚀 Project Motivation
+## Project Motivation
 
 In high-energy physics, new phenomena often appear as **subtle deviations** from known Standard Model processes.  
 Because labels for new physics are unavailable, **unsupervised anomaly detection** is a critical tool.
@@ -28,13 +28,13 @@ This project demonstrates:
   - `b` → background (normal events)  
   - `s` → signal (Higgs events, used *only* for evaluation)
 
-> ⚠️ Labels are **never used during training**.
+>  Labels are **never used during training**.
 
 ---
 
-## 🧠 Methodology
+##  Methodology
 
-### 1️⃣ Preprocessing (Physics-Aware)
+###  Preprocessing (Physics-Aware)
 - Replace missing-value marker `-999` with NaN
 - Median imputation (background-only)
 - Standard scaling (background-only)
@@ -43,7 +43,7 @@ This project demonstrates:
 
 ---
 
-### 2️⃣ Physics-Inspired Feature Engineering
+###  Physics-Inspired Feature Engineering
 Additional features motivated by ATLAS analyses:
 - Transverse momentum ratios
 - Mass-to-momentum ratios
@@ -55,7 +55,7 @@ These features improve scale invariance and anomaly sensitivity.
 
 ---
 
-### 3️⃣ Anomaly Detection Model
+###  Anomaly Detection Model
 - **Model:** Fully connected Autoencoder (PyTorch)
 - **Training data:** Background events only
 - **Bottleneck:** Strong compression to enforce manifold learning
@@ -64,28 +64,29 @@ These features improve scale invariance and anomaly sensitivity.
 
 ---
 
-### 4️⃣ Evaluation
+###  Evaluation
 - ROC–AUC using labels (evaluation only)
 - Comparison before/after physics-inspired improvements
 - Typical AUC achieved: **~0.60–0.70** (expected for this task)
 
 ---
 
-## 📈 Results (Summary)
+##  Results (Summary)
 
 | Model Variant | ROC AUC |
 |--------------|--------|
 | Baseline Autoencoder | ~0.58 |
-| Tight bottleneck AE | ~0.61 |
+| Tight bottleneck AE | ~0.63 |
 | + Physics-inspired features | No significant AUC gain |
 
 This behavior is expected due to the highly engineered nature of the dataset.
 
 ---
 
-## 🗂 Repository Structure
+## Repository Structure
 
 ```text
 ├── Predictive_modelling.ipynb   # Main analysis notebook
 ├── README.md                    # Project documentation
 ├── figures/                     # Plots and visualizations
+
